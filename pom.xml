@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.evolutionnext</groupId>
-    <artifactId>kafka-client</artifactId>
+    <artifactId>kafka-ecosystem-75min</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <name>kafka-client</name>
@@ -155,7 +155,7 @@
                         <image>dhinojosa/my-avro-consumer</image>
                     </to>
                     <container>
-                        <mainClass>com.xyzcorp.MyAvroConsumer</mainClass>
+                        <mainClass>com.com.evolutionnext.MyAvroConsumer</mainClass>
                     </container>
                 </configuration>
                 <executions>

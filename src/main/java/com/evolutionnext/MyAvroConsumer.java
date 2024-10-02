@@ -1,4 +1,4 @@
-package xyzcorp;
+package com.evolutionnext;
 
 import org.apache.kafka.clients.consumer.*;
 import org.apache.kafka.common.TopicPartition;
