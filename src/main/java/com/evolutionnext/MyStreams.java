@@ -30,7 +30,7 @@ public class MyStreams {
         StreamsBuilder builder = new StreamsBuilder();
 
         KStream<String, Integer> stream =
-            builder.stream("my_orders"); //Key: State, Value: Amount
+            builder.stream("my-orders"); //Key: State, Value: Amount
 
         //One branch
         stream.filter((key, value) -> key.equals("CA"))
