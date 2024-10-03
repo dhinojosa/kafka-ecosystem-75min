@@ -142,8 +142,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>20</source>
-                    <target>20</target>
+                    <source>21</source>
+                    <target>21</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -162,27 +162,6 @@
                                 <source>target/generated-sources/avro</source>
                             </sources>
                         </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>com.google.cloud.tools</groupId>
-                <artifactId>jib-maven-plugin</artifactId>
-                <version>3.2.1</version>
-                <configuration>
-                    <to>
-                        <image>dhinojosa/my-avro-consumer</image>
-                    </to>
-                    <container>
-                        <mainClass>com.com.evolutionnext.MyAvroConsumer</mainClass>
-                    </container>
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>build</goal>
-                        </goals>
                     </execution>
                 </executions>
             </plugin>

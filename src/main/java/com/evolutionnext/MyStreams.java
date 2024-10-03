@@ -5,9 +5,7 @@ import org.apache.kafka.streams.*;
 import org.apache.kafka.streams.errors.StreamsUncaughtExceptionHandler;
 import org.apache.kafka.streams.kstream.KStream;
 import org.apache.kafka.streams.kstream.Produced;
-import org.apache.kafka.streams.kstream.TimeWindows;
 
-import java.time.Duration;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.Properties;
@@ -48,17 +46,6 @@ public class MyStreams {
                 System.out.printf("key: %s, value %d", key, value))
             .to("state_orders_count",
                 Produced.with(Serdes.String(), Serdes.Long()));
-
-        //windowing
-        //Third branch
-        stream
-            .groupByKey()
-            .windowedBy(TimeWindows.ofSizeAndGrace(Duration.ofMinutes(3), Duration.ofMinutes(2)))
-            .aggregate(() -> 0L,
-                (key1, value1, aggregate) -> value1 + aggregate)
-            .toStream()
-            .map((key, value) -> new KeyValue<>(key.window().endTime().toEpochMilli(), value))
-            .to("windowed_time_topic", Produced.with(Serdes.Long(), Serdes.Long()));
 
         Topology topology = builder.build();
 
