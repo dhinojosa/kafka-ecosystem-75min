@@ -26,16 +26,16 @@ public class MyProducer {
             StringSerializer.class);
         properties.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG,
             IntegerSerializer.class);
-        properties.put(ProducerConfig.RETRIES_CONFIG, 30);
-        properties.put(ProducerConfig.ACKS_CONFIG, "all");
-        properties.put(ProducerConfig.RETRY_BACKOFF_MS_CONFIG, 1000);
-        properties.put(ProducerConfig.ENABLE_IDEMPOTENCE_CONFIG, true);
-        properties.put(ProducerConfig.BATCH_SIZE_CONFIG, 2000);
-        properties.put(ProducerConfig.LINGER_MS_CONFIG, 2000);
-        properties.put(ProducerConfig.BUFFER_MEMORY_CONFIG, 30000);
-        properties.put(ProducerConfig.MAX_BLOCK_MS_CONFIG, 15000);
-        properties.put(ProducerConfig.COMPRESSION_TYPE_CONFIG, "lz4");
-        properties.put(ProducerConfig.DELIVERY_TIMEOUT_MS_CONFIG, 10000);
+        // properties.put(ProducerConfig.RETRIES_CONFIG, 30);
+        // properties.put(ProducerConfig.ACKS_CONFIG, "all");
+        // properties.put(ProducerConfig.RETRY_BACKOFF_MS_CONFIG, 1000);
+        // properties.put(ProducerConfig.ENABLE_IDEMPOTENCE_CONFIG, true);
+        // properties.put(ProducerConfig.BATCH_SIZE_CONFIG, 2000);
+        // properties.put(ProducerConfig.LINGER_MS_CONFIG, 2000);
+        // properties.put(ProducerConfig.BUFFER_MEMORY_CONFIG, 30000);
+        // properties.put(ProducerConfig.MAX_BLOCK_MS_CONFIG, 15000);
+        // properties.put(ProducerConfig.COMPRESSION_TYPE_CONFIG, "lz4");
+        // properties.put(ProducerConfig.DELIVERY_TIMEOUT_MS_CONFIG, 10000);
         //properties.put(ProducerConfig.PARTITIONER_CLASS_CONFIG, "com.xyzcorp.MyPartitioner");
 
         KafkaProducer<String, Integer> producer =
